@@ -34,7 +34,7 @@
         </xd:desc>
     </xd:doc>
     
-    <xsl:output method="xml" encoding="UTF-8" normalization-form="NFC" indent="yes" omit-xml-declaration="yes"
+    <xsl:output method="xml" encoding="UTF-8" normalization-form="NFC" indent="no" omit-xml-declaration="yes"
     exclude-result-prefixes="#all"/>
     
 <!--  Key for checking of internal links in HTML documents.  -->
@@ -49,7 +49,7 @@
     </xsl:template>
     
 <!--  We don't want any comments.  -->
-    <xsl:template match="comment()" mode="#all"/>
+    <xsl:template match="comment()"/>
     
 <!--  We must remove the text contents of timestamps in docx core.xml files.  -->
     <xsl:template match="dcterms:modified">
@@ -65,8 +65,13 @@
         </xsl:copy>
     </xsl:template>
     
-<!--  Default identity transform.  -->
-    <xsl:template match="@* | node()" priority="-1" mode="#all">
+<!--  We reduce all runs of whitespace to a single space.  -->
+<!--    <xsl:template match="text()">
+        <xsl:value-of select="replace( .,'\s+', '&#x20;')"/>
+    </xsl:template>-->
+    
+<!--  Default identity transform for things not matched above.  -->
+    <xsl:template match="@* | node()" priority="-1">
         <xsl:copy>
             <xsl:apply-templates mode="#current" select="@*|node()"/>
         </xsl:copy>

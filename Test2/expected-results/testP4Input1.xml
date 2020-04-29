@@ -1,6 +1,5 @@
 <TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
+   <teiHeader><fileDesc>
          <titleStmt>
             <title type="main">A Christmas Carol</title>
             <title type="sub">A machine-readable transcription</title>
@@ -14,8 +13,7 @@
             <seg type="format">SGML TEI Lite</seg>
             <seg type="location">online</seg>
          </extent>
-         <publicationStmt>
-            <distributor>
+         <publicationStmt><distributor>
                <address>
                   <addrLine>
                      <name key="ota" type="organisation">Oxford Text Archive</name>
@@ -30,23 +28,18 @@
                   <addrLine>OX2 6NN</addrLine>
                   <addrLine>info@ota.ahds.ac.uk</addrLine>
                </address>
-            </distributor>
-            <idno type="ota">dick1736</idno>
-            <availability status="free">
+            </distributor><idno type="ota">dick1736</idno><availability status="free">
                <p>Freely available for non-commercial 
 use provided that this header is included in its 
 entirety with any copy distributed</p>
-            </availability>
-            <date>1992-11-01</date>
-         </publicationStmt>
+            </availability><date>1992-11-01</date></publicationStmt>
          <notesStmt>
             <note>This is a prototype header</note>
          </notesStmt>
          <sourceDesc>
             <p>Transcribed from the 1893 reprint of the first edition by Lou Burnard.</p>
          </sourceDesc>
-      </fileDesc>
-      <encodingDesc>
+      </fileDesc><encodingDesc>
          <editorialDecl>
             <p>Paragraph, page divisions and punctuation 
 have been checked against original; all direct speech
@@ -55,56 +48,11 @@ Unless otherwise indicated (by a REND attribute) all EMPH elements are
 rendered in italics in the original, and all SOCALLED elements by quotation
 marks.</p>
          </editorialDecl>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="byline" occurs="2"/>
-               <tagUsage gi="date" occurs="1"/>
-               <tagUsage gi="div" occurs="4"/>
-               <tagUsage gi="div0" occurs="5"/>
-               <tagUsage gi="docAuthor" occurs="1"/>
-               <tagUsage gi="docImprint" occurs="1"/>
-               <tagUsage gi="docTitle" occurs="1"/>
-               <tagUsage gi="emph" occurs="43"/>
-               <tagUsage gi="figDesc" occurs="4"/>
-               <tagUsage gi="figure" occurs="8"/>
-               <tagUsage gi="front" occurs="1"/>
-               <tagUsage gi="head" occurs="9"/>
-               <tagUsage gi="hi" occurs="3"/>
-               <tagUsage gi="item" occurs="5"/>
-               <tagUsage gi="l" occurs="2"/>
-               <tagUsage gi="label" occurs="5"/>
-               <tagUsage gi="list" occurs="1"/>
-               <tagUsage gi="p" occurs="707"/>
-               <tagUsage gi="pb" occurs="165"/>
-               <tagUsage gi="q" occurs="685"/>
-               <tagUsage gi="ref" occurs="5"/>
-               <tagUsage gi="signed" occurs="1"/>
-               <tagUsage gi="soCalled" occurs="7"/>
-               <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="titlePage" occurs="1"/>
-               <tagUsage gi="titlePart" occurs="2"/>
-            </namespace>
-         </tagsDecl>
+         <tagsDecl><namespace name="http://www.tei-c.org/ns/1.0"><tagUsage gi="body" occurs="1"/><tagUsage gi="byline" occurs="2"/><tagUsage gi="date" occurs="1"/><tagUsage gi="div" occurs="4"/><tagUsage gi="div0" occurs="5"/><tagUsage gi="docAuthor" occurs="1"/><tagUsage gi="docImprint" occurs="1"/><tagUsage gi="docTitle" occurs="1"/><tagUsage gi="emph" occurs="43"/><tagUsage gi="figDesc" occurs="4"/><tagUsage gi="figure" occurs="8"/><tagUsage gi="front" occurs="1"/><tagUsage gi="head" occurs="9"/><tagUsage gi="hi" occurs="3"/><tagUsage gi="item" occurs="5"/><tagUsage gi="l" occurs="2"/><tagUsage gi="label" occurs="5"/><tagUsage gi="list" occurs="1"/><tagUsage gi="p" occurs="707"/><tagUsage gi="pb" occurs="165"/><tagUsage gi="q" occurs="685"/><tagUsage gi="ref" occurs="5"/><tagUsage gi="signed" occurs="1"/><tagUsage gi="soCalled" occurs="7"/><tagUsage gi="text" occurs="1"/><tagUsage gi="titlePage" occurs="1"/><tagUsage gi="titlePart" occurs="2"/></namespace></tagsDecl>
          <refsDecl>
             <p>Staves (div) bear IDs in the form Sn.</p>
          </refsDecl>
-      </encodingDesc>
-      <revisionDesc>
-         <change>
-            <date>1992-10</date>
-            <label>pfr (Proofreader)</label>
-            <name>Burnard, Lou</name>check text</change>
-         <change>
-            <date>1994-12</date>
-            <label>cvt (Converter)</label>
-            <name>Price-Wilkins, John</name>convert to HTI DTD, incl. adding ID and changing ents to ISO values</change>
-         <change>
-            <date>1997-08-07</date>
-            <label>edt (Editor)</label>
-            <name>Fix, Jakob</name>Added the eight plates from the source document</change>
-      </revisionDesc>
-   </teiHeader>
+      </encodingDesc><revisionDesc><change><date>1992-10</date><label>pfr (Proofreader)</label><name>Burnard, Lou</name>check text</change><change><date>1994-12</date><label>cvt (Converter)</label><name>Price-Wilkins, John</name>convert to HTI DTD, incl. adding ID and changing ents to ISO values</change><change><date>1997-08-07</date><label>edt (Editor)</label><name>Fix, Jakob</name>Added the eight plates from the source document</change></revisionDesc></teiHeader>
 
    <text>
       <front>
