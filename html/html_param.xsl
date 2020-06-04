@@ -160,11 +160,27 @@ HTML width and height (in pixels) from supplied dimensions.</desc>
       </desc>
    </doc>
   <xsl:template name="headHook">
-    <!--
-    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-    <link href="/favicon.ico" rel="shortcut icon"
-	  type="image/x-icon"/>
-    -->
+      <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({CommonHTML:{minScaleAdjust:120},extensions:["tex2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js","a11y/accessibility-menu.js"],jax:["input/TeX","input/MathML","output/HTML-CSS"],displayAlign:"center",menuSettings:{zoom:"Click"},tex2jax:{inlineMath:[["$","$"]],displayMath:[["$$","$$"],["\\[","\\]"]],preview:["TeX"],processEscapes:!0},mml2jax:{preview:["MathML"]},"HTML-CSS":{availableFonts:["STIX","TeX"],preferredFont:["STIX"],webFont:["TeX"],imageFont:["TeX"],styles:{".MathJax":{"background-color":"#b3f2b3",display:"inline-block"}}},TeX:{extensions:["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],TagSide:"right",Macros:{upalpha:"{\\unicode{x03B1}}",upbeta:"{\\unicode{x03B2}}",upgamma:"{\\unicode{x03B3}}",updelta:"{\\unicode{x03B4}}",upepsilon:"{\\unicode{x03F5}}",upvarepsilon:"{\\unicode{x03B5}}",upzeta:"{\\unicode{x03B6}}",upeta:"{\\unicode{x03B7}}",uptheta:"{\\unicode{x03B8}}",upvartheta:"{\\unicode{x03D1}}",upiota:"{\\unicode{x03B9}}",upkappa:"{\\unicode{x03BA}}",uplambda:"{\\unicode{x03BB}}",upmu:"{\\unicode{x03BC}}",upnu:"{\\unicode{x03BD}}",upxi:"{\\unicode{x03BE}}",upomicron:"{\\unicode{x03BF}}",uppi:"{\\unicode{x03C0}}",uprho:"{\\unicode{x03C1}}",upsigma:"{\\unicode{x03C3}}",uptau:"{\\unicode{x03C4}}",upupsilon:"{\\unicode{x03C5}}",upphi:"{\\unicode{x03C6}}",upchi:"{\\unicode{x03C7}}",uppsi:"{\\unicode{x03C8}}",upomega:"{\\unicode{x03C9}}",Upalpha:"{\\unicode{x0391}}",Upbeta:"{\\unicode{x0392}}",Upgamma:"{\\unicode{x0393}}",Updelta:"{\\unicode{x0394}}",Upepsilon:"{\\unicode{x0395}}",Upzeta:"{\\unicode{x0396}}",Upeta:"{\\unicode{x0397}}",Uptheta:"{\\unicode{x0398}}",Upvartheta:"{\\unicode{x03F4}}",Upiota:"{\\unicode{x0399}}",Upkappa:"{\\unicode{x039A}}",Uplambda:"{\\unicode{x039B}}",Upmu:"{\\unicode{x039C}}",Upnu:"{\\unicode{x039D}}",Upxi:"{\\unicode{x039E}}",Upomicron:"{\\unicode{x039F}}",Uppi:"{\\unicode{x03A0}}",Uprho:"{\\unicode{x03A1}}",Upsigma:"{\\unicode{x03A3}}",Uptau:"{\\unicode{x03A4}}",Upupsilon:"{\\unicode{x03A5}}",Upphi:"{\\unicode{x03A6}}",Upchi:"{\\unicode{x03A7}}",Uppsi:"{\\unicode{x03A8}}",Upomega:"{\\unicode{x03A9}}",permille:"{\\unicode{x2030}}",hfill:"{\\enspace\\enspace}",enskip:"{\\enspace}",copyright:"{\\unicode{x00A9}}",dag:"{\\unicode{x2020}}",ddag:"{\\unicode{x2021}}",ointop:"{\\unicode{0x222E}}",P:"{\\unicode{0x00B6}}",textregistered:"{\\unicode{0x00AE}}",lhook:"{\\hookrightarrow}",rhook:"{\\hookleftarrow}",fancyscript:["{\\scr #1}",1],varvec:["\\pmb{#1}",1],parbox:["\\mbox{#2}",2],AA:"{\\unicode{x00C5}}"}},MathMenu:{showFontMenu:!0}}),MathJax.Hub.Register.StartupHook("TeX Jax Ready",function(){MathJax.InputJax.TeX.prefilterHooks.Add(function(e){e.math=e.math.replace(/\\kern *-\\nulldelimiterspace/g,""),e.math=e.math.replace(/\\mapstochar/g,"\\mapsto"),e.math=e.math.replace(/{?\\ss}?/g,"ß"),e.math=e.math.replace(/\\"a|{\\"a}|\\"{a}/g,"ä"),e.math=e.math.replace(/\\"o|{\\"o}|\\"{o}/g,"ö"),e.math=e.math.replace(/\\"u|{\\"u}|\\"{u}/g,"ü"),e.math=e.math.replace(/\\parbox(\[\w\])?{(.*?)}{(.*?)\\\\ (.*?)}/g,"\\parbox{$2}{$3 $4}"),e.math=e.math.replace(/\\user1/g,"\\mathcal"),e.math=e.math.replace(/\\user2/g,"\\pmb"),e.math=e.math.replace(/\\vspace\*?{[^}]+}/g,""),e.math=e.math.replace(/\\text\\EUR/g,"€"),e.math=e.math.replace(/\\textrm/g,"\\mathrm"),e.math=e.math.replace(/\\bf{/g,"\\mathbf{"),e.math=e.math.replace(/\\text{\\small{([^}]+)}}/g,"\\scriptstyle{\\text{$1}}"),e.math=e.math.replace(/\\text{\\footnotesize{([^}]+)}}/g,"\\scriptstyle{\\text{$1}}"),e.math=e.math.replace(/\\text{\\scriptsize{([^}]+)}}/g,"\\scriptscriptstyle{\\text{$1}}"),e.math=e.math.replace(/\\text{\\tiny{([^}]+)}}/g,"\\scriptscriptstyle{\\text{$1}}"),e.math=e.math.replace(/\\mathop ([^{]+?)\\limits/g,"\\mathop{$1}\\limits"),e.math=e.math.replace(/\\(big|Big|bigg|Bigg) *{([^}]+)}/g,"\\$1 $2"),e.math=e.math.replace(/\\CIRCLE/g,"{\\large\\unicode[.55,0.05]{x25CF}}"),e.math=e.math.replace(/\\LEFTcircle/g,"{\\large\\unicode[.55,0.05]{x25D1}}"),e.math=e.math.replace(/\\RIGHTcircle/g,"{\\large\\unicode[.55,0.05]{x25D0}}"),e.math=e.math.replace(/\\raisebox *{-[^}]+}{\$(.+?)\$}/g,"_{$1}"),e.math=e.math.replace(/\\raisebox *{[^}]+}{\$(.+?)\$}/g,"^{$1}"),e.math=e.math.replace(/\\textsc *{([^}]+)}/g,"{\\rm ~#~$1~#~}");for(var a,t=new RegExp("~#~(.*?)~#~","g");a=t.exec(e.math);){for(var i="",o=0;o!=a[1].length;o++){var p=a[1].substr(o,1);p.match(/[a-z]/)?i+="{\\small "+p.toUpperCase()+"}":i+=p}e.math=e.math.replace(/~#~.*?~#~/,i)}})});</script>
+      <script type="text/javascript">//<![CDATA[
+      // helper: insert MathJax script tage using CDNJS and
+      var insertMathJax = function (version) {
+          script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.async = true;
+          script.src = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js';
+          document.getElementsByTagName('head')[0].appendChild(script);
+      }
+
+      // Look up latest version on CDNJS and insertMathJax
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.onreadystatechange = function () {
+          if (xmlHttp.readyState == 4) if (xmlHttp.status == 200)
+              insertMathJax(JSON.parse(xmlHttp.responseText).version);
+      }
+      xmlHttp.open('GET', 'https://api.cdnjs.com/libraries/mathjax?fields=version', true);
+      xmlHttp.send(null);
+      //]]></script>
   </xsl:template>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="hook">
       <desc>[html] Hook where HTML can be inserted when creating an &lt;img&gt;</desc>
